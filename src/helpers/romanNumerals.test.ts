@@ -49,11 +49,11 @@ const valuesMap: Record<number, string> = {
 
 describe("romanNumerals", () => {
   describe("Integer to Roman", () => {
-    test("should return NaN if value is invalid", () => {
+    test("should return undefined if value is invalid", () => {
       expect(RomanNumerals.toRoman(Number('abc'))).toBeUndefined();
     });
 
-    test("should return NaN if value is out of range", () => {
+    test("should return undefined if value is out of range", () => {
       expect(RomanNumerals.toRoman(-1)).toBeUndefined();
       expect(RomanNumerals.toRoman(0)).toBeUndefined();
       expect(RomanNumerals.toRoman(4000)).toBeUndefined();
@@ -67,7 +67,7 @@ describe("romanNumerals", () => {
   });
 
   describe("Roman to Integer", () => {
-    test("should return NaN if value is invalid", () => {
+    test("should return undefined if value is invalid", () => {
       expect(RomanNumerals.fromRoman('')).toBeUndefined();
       expect(RomanNumerals.fromRoman('A')).toBeUndefined();
     });
